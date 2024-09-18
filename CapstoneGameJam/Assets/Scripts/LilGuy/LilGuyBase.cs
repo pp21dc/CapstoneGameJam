@@ -61,4 +61,14 @@ public class LilGuyBase : MonoBehaviour
         this.stamina = stamina;
         this.strength = strength;
     }
+
+    public GameObject GetHitboxPrefab()
+    {
+        return hitboxPrefab;
+    }
+
+    public Transform GetAttackPosition()
+    {
+        return attackPosition; 
+    }
 }
