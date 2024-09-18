@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour
     private List<LilGuyBase> lilGuys = new List<LilGuyBase>();
     private int currentLilGuy;
     private const int teamSize = 3;
+    private Transform primaryHolder;
+    private Transform secondaryHolder;
+    private Transform tertiaryHolder;
 
     //MOVEMENT
     private const float moveSpeed = 2.0f;
@@ -35,17 +39,23 @@ public class Player : MonoBehaviour
 
     public void Attack()
     {
-        lilGuys[currentLilGuy].Attack();
+        lilGuys[0].Attack();
     }
 
     public void Special()
     {
-        lilGuys[currentLilGuy].Special();
+        lilGuys[0].Special();
     }
 
     private void SwapLilGuy()
     {
-        currentLilGuy++;
+        //TODO: implement health checking and swap to next availible
+        LilGuyBase holder = lilGuys[0];
+        for (int i = 0; i < lilGuys.Count; i++)
+        {
+            lilGuys[i] = lilGuys[i + 1];
+        }
+        lilGuys[2] = holder;
     }
 
     private void AddToTeam()
@@ -55,6 +65,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        lilGuys[0].State = lilGuys[0].State.handleInput();
     }
 }

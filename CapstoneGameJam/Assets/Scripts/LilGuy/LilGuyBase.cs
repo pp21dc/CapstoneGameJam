@@ -20,6 +20,7 @@ public class LilGuyBase : MonoBehaviour
     [SerializeField] private GameObject hitboxPrefab;
 
     private CharacterState state;
+    public CharacterState State { get { return state; } set { state = value; } }
 
     public enum PrimaryType
     {
