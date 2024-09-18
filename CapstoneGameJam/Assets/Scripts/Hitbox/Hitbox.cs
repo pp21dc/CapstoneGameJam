@@ -6,7 +6,12 @@ public class Hitbox : MonoBehaviour
 {
     private int dmg;
 
+    private static Hitbox instance;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

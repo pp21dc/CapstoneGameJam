@@ -441,7 +441,16 @@ PrefabInstance:
       value: Whitebox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2586106523413325309, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 9184863453442324752, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 4173309203167357421, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 9070129969932211749, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 4709834231336275195, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 2635991516163073543, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 387522430242096537, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 7224148649251010171, guid: bd68c63465d960944b23b972d49991ee, type: 3}
+    - {fileID: 7791741941322159219, guid: bd68c63465d960944b23b972d49991ee, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd68c63465d960944b23b972d49991ee, type: 3}
