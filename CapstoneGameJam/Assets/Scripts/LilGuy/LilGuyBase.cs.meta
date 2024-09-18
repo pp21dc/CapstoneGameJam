@@ -3,7 +3,10 @@ guid: e401b2c4912ef744cb8e4828d22575e8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - attackPosition: {instanceID: 0}
+  - hitboxPrefab: {fileID: 6775225352290177459, guid: 17e124038abfd7742a21351f5289854b,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
