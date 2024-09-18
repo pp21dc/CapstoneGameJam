@@ -50,10 +50,10 @@ public class Player : MonoBehaviour
 
     public void ShowStatScreen()
     {
-        /*spdText.text = "SPD: " + lilGuys[0].speed;
+        spdText.text = "SPD: " + lilGuys[0].speed;
         strText.text = "STR: " + lilGuys[0].strength;
         staText.text = "STA: " + lilGuys[0].stamina;
-        hpText.text = "HP: " + lilGuys[0].heath;*/
+        hpText.text = "HP: " + lilGuys[0].heath;
         statScreen.SetActive(!statScreen.active);
     }
     private void OnDrawGizmos()
