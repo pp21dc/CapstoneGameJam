@@ -31,4 +31,9 @@ public class InputHandler : MonoBehaviour
     {
         player.Special();
     }
+
+    public void OnShowStatScreen(InputAction.CallbackContext context)
+    {
+        player.ShowStatScreen();
+    }
 }
