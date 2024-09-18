@@ -12,7 +12,9 @@ public class StrengthType : LilGuyBase
 
     public override void Special()
     {
-        //TODO: ADD SPECIAL ATTACK
-        base.Special();
+        GameObject hitbox = Instantiate(GetHitboxPrefab(), GetAttackPosition().position, Quaternion.identity);
+        hitbox.transform.localScale = hitbox.transform.localScale * 3; 
+        hitbox.transform.SetParent(transform);
+        Destroy(hitbox, 1f);
     }
 }
