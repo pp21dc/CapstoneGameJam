@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     //MOVEMENT
     private const float moveSpeed = 25.0f;
+    private const float jumpForce = 5.0f;
     private Vector2 moveVector;
     private Rigidbody rb;
 
@@ -55,9 +56,20 @@ public class Player : MonoBehaviour
         hpText.text = "HP: " + lilGuys[0].heath;*/
         statScreen.SetActive(!statScreen.active);
     }
+    private void OnDrawGizmos()
+    {
+        
+    }
     public void Jump()
     {
+        int layerMask = 1 << 3;
         //TODO: jump :3
+        if (Physics.Raycast(transform.position, Vector3.down, 5, layerMask))
+        {
+            Debug.DrawRay(transform.position, Vector3.down, Color.red);
+            Debug.Log("Jumped");
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     public void Attack()
