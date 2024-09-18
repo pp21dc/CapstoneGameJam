@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        lilGuys[0] = GameObject.FindGameObjectWithTag("Guy").GetComponent<LilGuyBase>();
+        Debug.Log(lilGuys[0].name.ToString());
     }
 
     public void Move(Vector2 input)
