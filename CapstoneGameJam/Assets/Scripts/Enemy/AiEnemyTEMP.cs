@@ -13,7 +13,7 @@ public class AiEnemyTEMP : MonoBehaviour
     [SerializeField] private GameObject hitbox;
     GameObject playerRef;
 
-    private void Death() { Destroy(this, 0.5f); }
+    private void Death() { Destroy(this.gameObject, 0.5f); }
 
     private void Attack() 
     {
