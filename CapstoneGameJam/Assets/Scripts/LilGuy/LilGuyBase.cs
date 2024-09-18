@@ -29,6 +29,11 @@ public class LilGuyBase : MonoBehaviour
         AllAround
     }
 
+    private void Awake()
+    {
+        attackPosition = gameObject.transform;
+    }
+
     /// <summary>
     /// This is the basic attack across all lil guys\
     /// it uses a hitbox prefab to detect other ai within it and deal damage from that script
