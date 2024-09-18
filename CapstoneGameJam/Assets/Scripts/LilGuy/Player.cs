@@ -85,13 +85,25 @@ public class Player : MonoBehaviour
     private void SwapLilGuy()
     {
         //TODO: implement health checking and swap to next availible
-        LilGuyBase holder = lilGuys[0];
-        for (int i = 0; i < lilGuys.Count; i++)
+        int deadCount = 0;
+        foreach (LilGuyBase lilGuy in lilGuys)
         {
-            lilGuys[i] = lilGuys[i + 1];
+            if (lilGuy.heath <= 0) deadCount++;  
         }
-        lilGuys[2] = holder;
-        
+        if (deadCount >= 3) return;
+
+        while (lilGuys[0].heath <= 0)
+        {
+            LilGuyBase holder = lilGuys[0]; //Hold the first lil guy
+            for (int i = 0; i < lilGuys.Count; i++)
+            {
+
+                lilGuys[i] = lilGuys[i + 1]; //Move everyone up 1
+
+            }
+            lilGuys[2] = holder; //Last one is the first guy now
+        }
+
     }
 
     private void AddToTeam()
