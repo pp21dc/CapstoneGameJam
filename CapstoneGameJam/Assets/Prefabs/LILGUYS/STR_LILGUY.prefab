@@ -127,4 +127,5 @@ MonoBehaviour:
   speed: 25
   stamina: 25
   strength: 50
-  hitboxPrefab: {fileID: 0}
+  hitboxPrefab: {fileID: 6775225352290177459, guid: 17e124038abfd7742a21351f5289854b,
+    type: 3}
