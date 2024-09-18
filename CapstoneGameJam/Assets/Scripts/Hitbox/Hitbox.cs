@@ -6,6 +6,8 @@ public class Hitbox : MonoBehaviour
 {
     private int dmg;
 
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))

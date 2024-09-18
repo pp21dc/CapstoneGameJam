@@ -9,12 +9,15 @@ public class Player : MonoBehaviour
     //--------------VARIABLES--------------
 
     //LIL GUY MANAGEMENT
-    private List<LilGuyBase> lilGuys = new List<LilGuyBase>();
+    private List<LilGuyBase> lilGuys = new List<LilGuyBase>(teamSize);
     private int currentLilGuy;
     private const int teamSize = 3;
     private Transform primaryHolder;
     private Transform secondaryHolder;
     private Transform tertiaryHolder;
+
+    //GAMEJAM TEMP
+    [SerializeField] private GameObject strPrefab;
 
     //MOVEMENT
     private const float moveSpeed = 25.0f;
@@ -32,8 +35,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        lilGuys[0] = GameObject.FindGameObjectWithTag("Guy").GetComponent<LilGuyBase>();
-        Debug.Log(lilGuys[0].name.ToString());
+        lilGuys.Add(strPrefab.GetComponent<LilGuyBase>());
+        //Debug.Log(lilGuys[0].name.ToString());
     }
 
     public void Move(Vector2 input)
