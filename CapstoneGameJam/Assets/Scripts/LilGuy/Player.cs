@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
             lilGuys[i] = lilGuys[i + 1];
         }
         lilGuys[2] = holder;
+        
     }
 
     private void AddToTeam()
