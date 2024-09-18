@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,11 +21,19 @@ public class Player : MonoBehaviour
     private Vector2 moveVector;
     private Rigidbody rb;
 
+    //STAT SCREEN
+    [SerializeField] private GameObject statScreen;
+    [SerializeField] private TMP_Text strText;
+    [SerializeField] private TMP_Text staText;
+    [SerializeField] private TMP_Text spdText;
+    [SerializeField] private TMP_Text hpText;
     public Vector2 MoveVector { get { return moveVector; } set { moveVector = value; } }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        lilGuys[0] = GameObject.FindGameObjectWithTag("Guy").GetComponent<LilGuyBase>();
+        Debug.Log(lilGuys[0].name.ToString());
     }
 
     public void Move(Vector2 input)
@@ -35,6 +44,14 @@ public class Player : MonoBehaviour
 
     }
 
+    public void ShowStatScreen()
+    {
+        /*spdText.text = "SPD: " + lilGuys[0].speed;
+        strText.text = "STR: " + lilGuys[0].strength;
+        staText.text = "STA: " + lilGuys[0].stamina;
+        hpText.text = "HP: " + lilGuys[0].heath;*/
+        statScreen.SetActive(!statScreen.active);
+    }
     public void Jump()
     {
         //TODO: jump :3

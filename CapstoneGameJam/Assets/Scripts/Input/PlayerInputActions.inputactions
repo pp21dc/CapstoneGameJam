@@ -456,6 +456,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ShowStatScreen",
+                    "type": "Button",
+                    "id": "6af7bc4e-b6f1-4181-b47c-5ce37fae1377",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -632,6 +641,28 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Special",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "acbd27a6-314d-401b-8261-93243aba02e1",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard Mouse",
+                    "action": "ShowStatScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a74d98da-40d2-4f1c-a0b8-ee22fffe28dc",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "ShowStatScreen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

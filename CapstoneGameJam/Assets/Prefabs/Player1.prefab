@@ -123,6 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a0a489bd3dfcf419d849139d7b83f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statScreen: {fileID: 0}
+  strText: {fileID: 0}
+  staText: {fileID: 0}
+  spdText: {fileID: 0}
+  hpText: {fileID: 0}
 --- !u!114 &-6502282727234163088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +238,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 70f08480-96e3-4c0a-ae49-b92d4c1a3bee
     m_ActionName: Player/Special[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -3436382721356136697}
+        m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+        m_MethodName: OnShowStatScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6af7bc4e-b6f1-4181-b47c-5ce37fae1377
+    m_ActionName: Player/ShowStatScreen[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
