@@ -16,8 +16,11 @@ public class Player : MonoBehaviour
     private Transform tertiaryHolder;
 
     //MOVEMENT
-    private const float moveSpeed = 2.0f;
+    private const float moveSpeed = 25.0f;
+    private Vector2 moveVector;
     private Rigidbody rb;
+
+    public Vector2 MoveVector { get { return moveVector; } set { moveVector = value; } }
 
     private void Awake()
     {
@@ -67,5 +70,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         //lilGuys[0].State = lilGuys[0].State.handleInput();
+    }
+
+    private void FixedUpdate()
+    {
+        Move(moveVector);
     }
 }
