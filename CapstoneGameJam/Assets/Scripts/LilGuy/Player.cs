@@ -66,6 +66,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        lilGuys[0].State = lilGuys[0].State.handleInput();
+        //lilGuys[0].State = lilGuys[0].State.handleInput();
     }
 }

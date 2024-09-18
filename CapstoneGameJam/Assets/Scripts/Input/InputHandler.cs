@@ -11,23 +11,23 @@ public class InputHandler : MonoBehaviour
         player = GetComponent<Player>();
     }
 
-    private void OnMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 moveVec = context.ReadValue<Vector2>();
         player.Move(moveVec);
     }
 
-    private void OnJump(InputAction.CallbackContext context)
+    public void OnJump(InputAction.CallbackContext context)
     {
         player.Jump();
     }
 
-    private void OnAttack(InputAction.CallbackContext context)
+    public void OnAttack(InputAction.CallbackContext context)
     {
         player.Attack();
     }
 
-    private void OnSpecial(InputAction.CallbackContext context)
+    public void OnSpecial(InputAction.CallbackContext context)
     {
         player.Special();
     }
